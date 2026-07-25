@@ -1,0 +1,413 @@
+/* ==========================================
+   AutoMaster Pro 2026
+   Premium Topbar
+==========================================*/
+
+.topbar{
+
+    margin-left:330px;
+
+    padding:20px 25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:40px;
+
+    position:relative;
+
+    z-index:995;
+}
+
+.topbar-glow-bubble {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124, 92, 255, 0.28) 0%, rgba(108, 99, 255, 0.05) 70%, transparent 100%);
+    filter: blur(15px);
+    top: 50%;
+    right: 280px;
+    transform: translateY(-50%);
+    z-index: 0;
+    pointer-events: none;
+    animation: floatBubble 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatBubble {
+    0% {
+        transform: translateY(-50%) translateX(0px) scale(0.9);
+    }
+    100% {
+        transform: translateY(-55%) translateX(15px) scale(1.1);
+    }
+}
+
+/*==========================
+ LEFT SIDE
+==========================*/
+
+.topbar-left{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/*==========================
+ SEARCH
+==========================*/
+
+.search-box{
+
+    width:420px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:0 18px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+    0 12px 30px rgba(108,99,255,.08);
+}
+
+.search-icon{
+
+    font-size:18px;
+
+    color:#7C5CFF;
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-size:15px;
+
+    font-family:Poppins,sans-serif;
+}
+
+.shortcut{
+
+    padding:6px 12px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.45);
+
+    color:#7C5CFF;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+/*==========================
+ WELCOME
+==========================*/
+
+.welcome-section{
+
+    margin-top:22px;
+
+    margin-left:6px;
+}
+
+.welcome-section h1{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:6px;
+
+     line-height:1.2;
+}
+
+.welcome-section p{
+
+    font-size:17px;
+
+    color:#6B7280;
+
+
+    font-weight:500;
+
+    margin:0;
+}
+
+/*==========================
+ RIGHT SIDE
+==========================*/
+
+.topbar-right{
+
+    width:250px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:18px;
+
+    position:relative;
+
+    z-index:997;
+}
+
+.top-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    position:relative;
+
+    z-index:999;
+}
+
+/*==========================
+ ICONS
+==========================*/
+
+.top-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.top-icon:hover{
+
+    transform:translateY(-4px);
+}
+
+/*==========================
+ PROFILE
+==========================*/
+
+.profile-card{
+
+    width:165px;
+
+    height:48px;
+
+    padding:0 12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    position:relative;
+}
+
+.profile-avatar{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(135deg,#7C5CFF,#A855F7);
+
+    color:#fff;
+
+    font-weight:700;
+
+    font-size:14px;
+}
+
+.profile-text{
+
+    flex:1;
+}
+
+.profile-text h4{
+
+    font-size:14px;
+
+    margin:0;
+}
+
+.profile-text small{
+
+    font-size:11px;
+
+    color:#6B7280;
+}
+
+.profile-arrow{
+
+    cursor:pointer;
+
+    position:relative;
+
+    font-size:11px;
+}
+
+/*==========================
+ DROPDOWN
+==========================*/
+
+.profile-dropdown{
+
+    display:none;
+
+    position:absolute;
+
+    top:30px;
+
+    right:0;
+
+    width:170px;
+
+    border-radius:16px;
+
+    background:#fff;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+
+    overflow:hidden;
+
+    z-index:999;
+}
+
+.profile-arrow:hover .profile-dropdown{
+
+    display:block;
+}
+
+.profile-dropdown a{
+
+    display:block;
+
+    padding:12px 16px;
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-size:14px;
+}
+
+.profile-dropdown a:hover{
+
+    background:#f4f4ff;
+}
+
+/*==========================
+ DATE
+==========================*/
+
+.datetime-card{
+
+    width:190px;
+
+    height:65px;
+
+    padding:14px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    text-align:center;
+
+    box-shadow:
+    0 12px 30px rgba(108,99,255,.08);
+}
+
+.datetime-card h4{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    line-height:1.2;
+
+    margin:0;
+
+}
+
+.datetime-card p{
+
+    font-size:11px;
+
+    color:#6B7280;
+
+     margin-top:4px;
+
+    line-height:1;
+
+}

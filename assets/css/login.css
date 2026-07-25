@@ -1,0 +1,588 @@
+/* ======================================
+   AutoMaster Pro 2026 Login CSS
+   Glassmorphism + Neumorphism
+====================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+
+    background:
+    radial-gradient(circle at top left,#ffffff 0%,#eef2ff 30%),
+    radial-gradient(circle at top right,#ede9fe 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#dbeafe 0%,transparent 40%),
+    linear-gradient(
+        135deg,
+        #f8fafc,
+        #eef2ff,
+        #ede9fe
+    );
+}
+
+/* ==========================
+   Floating Glass Bubbles
+========================== */
+
+.bubble{
+    position:absolute;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle at 30% 30%,
+        rgba(255,255,255,.9),
+        rgba(255,255,255,.15)
+    );
+
+    border:1px solid rgba(255,255,255,.55);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+    inset 0 0 25px rgba(255,255,255,.5),
+    0 15px 35px rgba(108,99,255,.15);
+
+    animation:float 10s ease-in-out infinite;
+}
+
+.b1{
+    width:140px;
+    height:140px;
+    top:6%;
+    left:18%;
+}
+
+.b2{
+    width:90px;
+    height:90px;
+    top:12%;
+    right:18%;
+}
+
+.b3{
+    width:180px;
+    height:180px;
+    bottom:8%;
+    left:5%;
+}
+
+.b4{
+    width:120px;
+    height:120px;
+    bottom:15%;
+    right:8%;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ==========================
+   Main Container
+========================== */
+
+.container{
+
+    width:1200px;
+    max-width:95%;
+
+    min-height:680px;
+
+    display:flex;
+
+    border-radius:40px;
+
+    backdrop-filter:blur(30px);
+
+    background:rgba(255,255,255,0.20);
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   Left Side
+========================== */
+
+.left{
+
+    width:55%;
+
+    padding:60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    position:relative;
+}
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.logo{
+
+    width:80px;
+    height:80px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #6c63ff,
+        #8b7cff
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-size:34px;
+
+    box-shadow:
+    0 0 25px rgba(108,99,255,.45),
+    0 15px 35px rgba(108,99,255,.25);
+}
+
+.brand{
+    font-size:42px;
+    font-weight:800;
+    color:#111827;
+}
+
+.brand-sub{
+    font-size:18px;
+    color:#4b5563;
+}
+
+.subtitle{
+
+    margin-top:25px;
+
+    color:#6b7280;
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+.car{
+    margin-top:40px;
+    text-align:center;
+    position:relative;
+}
+
+.car img{
+    width:100%;
+    max-width:520px;
+    z-index:10;
+    position:relative;
+}
+
+.car-card{
+
+    position:absolute;
+
+    bottom:-30px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:300px;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.25);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+}
+
+/* glow under car */
+
+.car::after{
+
+    content:"";
+
+    width:280px;
+    height:40px;
+
+    position:absolute;
+
+    left:50%;
+    bottom:30px;
+
+    transform:translateX(-50%);
+
+    background:
+    radial-gradient(
+    ellipse at center,
+    rgba(108,99,255,0.55),
+    transparent);
+
+    filter:blur(12px);
+}
+
+/* ==========================
+   Right Side
+========================== */
+
+.right{
+    width:45%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ==========================
+   Login Card
+========================== */
+
+.login-card{
+
+    width:450px;
+
+    padding:50px;
+
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,.45),
+    rgba(255,255,255,.15));
+
+    backdrop-filter:blur(40px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    box-shadow:
+    0 25px 60px rgba(108,99,255,.12),
+    inset 0 1px 1px rgba(255,255,255,.6);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.login-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    top:-80px;
+    right:-80px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    opacity:.6;
+}
+
+.login-title{
+
+    text-align:center;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:10px;
+
+    letter-spacing:-1px;
+}
+
+.login-sub{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    margin-bottom:35px;
+}
+
+/* ==========================
+   Form
+========================== */
+
+.form-group{
+    margin-bottom:22px;
+}
+
+.form-control{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    inset 5px 5px 12px rgba(0,0,0,.03),
+    inset -5px -5px 12px rgba(255,255,255,.9);
+
+    transition:.3s;
+}
+
+.form-control:focus{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 20px rgba(108,99,255,.18);
+}
+
+.form-control:focus{
+
+    border:1px solid #6c63ff;
+
+    box-shadow:
+    0 0 15px rgba(108,99,255,.2);
+}
+
+/* ==========================
+   Button
+========================== */
+
+.login-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    background:
+    linear-gradient(
+        135deg,
+        #6c63ff,
+        #8b7cff);
+
+    box-shadow:
+    0 15px 30px rgba(108,99,255,.35);
+
+    transition:.4s;
+}
+
+.login-btn:hover{
+
+    transform:
+    translateY(-4px)
+    scale(1.02);
+
+    box-shadow:
+    0 20px 40px rgba(108,99,255,.45);
+}
+
+.login-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 35px rgba(108,99,255,.45);
+}
+
+/* ==========================
+   Error
+========================== */
+
+.error{
+
+    background:#ffe5e5;
+
+    color:#dc2626;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.footer-text{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#6b7280;
+
+    font-size:14px;
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:992px){
+
+    .container{
+        flex-direction:column;
+        height:auto;
+    }
+
+    .left,
+    .right{
+        width:100%;
+    }
+
+    .left{
+        padding:40px;
+    }
+
+    .brand{
+        font-size:32px;
+    }
+
+    .login-card{
+        width:90%;
+        margin-bottom:40px;
+    }
+
+    .car img{
+        max-width:380px;
+    }
+}
+.light-1,
+.light-2,
+.light-3{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+    z-index:-1;
+}
+
+.light-1{
+    width:300px;
+    height:300px;
+    background:#8b7cff;
+    top:-80px;
+    left:-80px;
+    opacity:.25;
+}
+
+.light-2{
+    width:250px;
+    height:250px;
+    background:#60a5fa;
+    right:-50px;
+    top:150px;
+    opacity:.20;
+}
+
+.light-3{
+    width:350px;
+    height:350px;
+    background:#c084fc;
+    bottom:-100px;
+    left:30%;
+    opacity:.15;
+}
+
+/* ==========================
+   Glass Light Lines
+========================== */
+
+.line{
+    position:absolute;
+    background:rgba(255,255,255,.35);
+    z-index:-1;
+}
+
+.line1{
+    width:500px;
+    height:1px;
+    top:15%;
+    left:10%;
+}
+
+.line2{
+    width:400px;
+    height:1px;
+    bottom:20%;
+    right:8%;
+}
+
+.line3{
+    width:1px;
+    height:250px;
+    right:22%;
+    top:10%;
+}

@@ -1,0 +1,1015 @@
+/* ===================================================
+   AutoMaster Pro 2026
+   Master Theme File
+   Glassmorphism + Neumorphism UI System
+=================================================== */
+
+/* ==============================
+   GOOGLE FONT
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==============================
+   ROOT VARIABLES
+============================== */
+
+:root{
+
+    /* Primary Colors */
+
+    --primary:#6C63FF;
+    --primary-light:#8B7CFF;
+
+    --secondary:#4F46E5;
+
+    --success:#22C55E;
+    --danger:#EF4444;
+    --warning:#F59E0B;
+    --info:#3B82F6;
+
+    /* Background */
+
+    --bg-1:#F8FAFC;
+    --bg-2:#EEF2FF;
+    --bg-3:#EDE9FE;
+
+    /* Text */
+
+    --text-dark:#111827;
+    --text-light:#6B7280;
+
+    /* Glass */
+
+    --glass-bg:
+    rgba(255,255,255,0.25);
+
+    --glass-border:
+    rgba(255,255,255,0.40);
+
+    --glass-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+
+    --glass-blur:20px;
+
+    /* Radius */
+
+    --radius-sm:15px;
+    --radius-md:25px;
+    --radius-lg:35px;
+
+}
+
+/* ==============================
+   RESET
+============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--bg-1),
+    var(--bg-2),
+    var(--bg-3));
+
+    color:var(--text-dark);
+
+    overflow-x:hidden;
+}
+
+/* ==============================
+   GLASS CARD
+============================== */
+
+.glass-card{
+
+    background:
+    var(--glass-bg);
+
+    backdrop-filter:
+    blur(var(--glass-blur));
+
+    border:
+    1px solid var(--glass-border);
+
+    box-shadow:
+    var(--glass-shadow);
+
+    border-radius:
+    var(--radius-lg);
+}
+
+/* ==============================
+   GLASS BUTTON
+============================== */
+
+.btn-primary{
+
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-light));
+
+    box-shadow:
+    0 10px 25px rgba(108,99,255,.30);
+}
+
+.btn-primary:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 15px 35px rgba(108,99,255,.40);
+}
+
+/* ==============================
+   GLASS INPUT
+============================== */
+
+.form-control{
+
+    width:100%;
+
+    padding:15px 20px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:
+    rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    inset 4px 4px 10px rgba(0,0,0,.03),
+    inset -4px -4px 10px rgba(255,255,255,.8);
+
+    transition:.3s;
+}
+
+.form-control:focus{
+
+    box-shadow:
+    0 0 15px rgba(108,99,255,.20);
+}
+
+/* ==============================
+   KPI CARD
+============================== */
+
+.kpi-card{
+
+    background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.42),
+rgba(255,255,255,.18));
+
+    backdrop-filter:
+    blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,.40);
+
+    border-radius:30px;
+
+    box-shadow:
+
+0 12px 30px rgba(108,99,255,.10),
+
+0 4px 12px rgba(255,255,255,.60) inset,
+
+0 -8px 18px rgba(255,255,255,.18) inset;
+
+    padding:25px;
+}
+
+/* ==============================
+   ICON CIRCLE
+============================== */
+
+.icon-circle{
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-size:24px;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-light));
+
+    box-shadow:
+    0 10px 25px rgba(108,99,255,.35);
+}
+
+/* ==============================
+   FLOATING GLASS BUBBLES
+============================== */
+
+.bubble{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle at 30% 30%,
+    rgba(255,255,255,.9),
+    rgba(255,255,255,.15));
+
+    border:
+    1px solid rgba(255,255,255,.5);
+
+    backdrop-filter:
+    blur(15px);
+
+    box-shadow:
+    inset 0 0 20px rgba(255,255,255,.4),
+    0 10px 25px rgba(108,99,255,.10);
+
+    animation:
+    floatBubble 8s ease-in-out infinite;
+}
+
+@keyframes floatBubble{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ==============================
+   PAGE TITLE
+============================== */
+
+.page-title{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:
+    var(--text-dark);
+}
+
+/* ==============================
+   PAGE SUBTITLE
+============================== */
+
+.page-subtitle{
+
+    color:
+    var(--text-light);
+
+    margin-top:8px;
+}
+
+/* ==============================
+   TABLE DESIGN
+============================== */
+
+.glass-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:
+    rgba(255,255,255,.20);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    overflow:hidden;
+}
+
+.glass-table th{
+
+    padding:18px;
+
+    background:
+    rgba(255,255,255,.30);
+
+    text-align:left;
+}
+
+.glass-table td{
+
+    padding:16px;
+
+    border-top:
+    1px solid rgba(255,255,255,.25);
+}
+
+/* ==============================
+   SCROLLBAR
+============================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f1f5f9;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+    linear-gradient(
+    var(--primary),
+    var(--primary-light));
+
+    border-radius:20px;
+}
+
+.dark-mode{
+
+    background:
+    linear-gradient(
+    135deg,
+    #0f172a,
+    #111827,
+    #1e293b);
+
+    color:white;
+}
+
+.dark-mode .glass-card{
+    background:rgba(255,255,255,.08);
+}
+
+.dark-mode .sidebar{
+    background:rgba(255,255,255,.05);
+}
+
+.dark-mode .topbar{
+    color:white;
+}
+
+/* ===================================
+   PREMIUM DASHBOARD CONTENT
+=================================== */
+
+.dashboard-content{
+
+     margin-left:330px;
+     
+      padding:10px 20px 20px;
+
+}
+
+.dashboard-heading h1{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#1F2937;
+
+    margin-bottom:8px;
+
+}
+
+.dashboard-heading p{
+
+    font-size:18px;
+
+    color:#6B7280;
+
+    margin-bottom:35px;
+
+}
+
+/* ===================================
+   KPI GRID
+=================================== */
+
+.kpi-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:14px;
+
+    margin-top:12px;
+
+}
+
+/* ===================================
+   KPI CARD
+=================================== */
+
+.kpi-card{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    min-height:118px;
+
+    padding:16px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.26);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.08),
+
+        inset 0 1px 1px rgba(255,255,255,.70);
+
+    transition:.35s;
+
+}
+
+/* ===================================
+   KPI GLASS REFLECTION
+=================================== */
+
+.kpi-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-40px;
+    right:-40px;
+
+    width:140px;
+    height:140px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(255,255,255,.75),
+    transparent);
+
+    filter:blur(30px);
+
+}
+
+.kpi-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-40px;
+    bottom:-40px;
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(124,92,255,.25),
+    transparent);
+
+    filter:blur(35px);
+
+}
+
+.kpi-card:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.02);
+
+    box-shadow:
+
+    0 20px 40px rgba(108,99,255,.18),
+
+    0 8px 18px rgba(255,255,255,.60) inset;
+
+}
+
+.kpi-icon{
+
+    position:relative;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+
+    color:#fff;
+
+    flex-shrink:0;
+
+    border:3px solid rgba(255,255,255,.55);
+
+    box-shadow:
+
+    inset 0 4px 10px rgba(255,255,255,.45),
+
+    0 12px 25px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+}
+
+.kpi-card:hover .kpi-icon{
+
+    transform:
+
+    rotate(-8deg)
+
+    scale(1.08);
+
+}
+
+/* ===================================
+   KPI ICON COLORS
+=================================== */
+
+/* ===================================
+   PURPLE
+=================================== */
+
+.purple{
+
+    background:linear-gradient(
+    135deg,
+    #7C5CFF,
+    #B14EFF);
+
+    box-shadow:
+
+    0 0 18px rgba(124,92,255,.45),
+
+    0 10px 25px rgba(124,92,255,.35);
+
+}
+
+/* ===================================
+   BLUE
+=================================== */
+
+.blue{
+
+    background:linear-gradient(
+    135deg,
+    #2563EB,
+    #60A5FA);
+
+    box-shadow:
+
+    0 0 18px rgba(37,99,235,.40),
+
+    0 10px 25px rgba(37,99,235,.30);
+
+}
+
+/* ===================================
+   GREEN
+=================================== */
+
+.green{
+
+    background:linear-gradient(
+    135deg,
+    #16A34A,
+    #4ADE80);
+
+    box-shadow:
+
+    0 0 18px rgba(22,163,74,.40),
+
+    0 10px 25px rgba(22,163,74,.30);
+
+}
+
+/* ===================================
+   PINK
+=================================== */
+
+.pink{
+
+    background:linear-gradient(
+    135deg,
+    #EC4899,
+    #F472B6);
+
+    box-shadow:
+
+    0 0 18px rgba(236,72,153,.40),
+
+    0 10px 25px rgba(236,72,153,.30);
+
+}
+
+.kpi-text{
+
+    flex:1;
+
+}
+
+.kpi-text small{
+
+    display:block;
+
+    font-size:12px;
+
+    color:#6B7280;
+
+    margin-bottom:8px;
+
+}
+
+.kpi-text h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:6px;
+
+}
+
+.kpi-text span{
+
+    font-size:11px;
+
+    font-weight:600;
+
+}
+
+.up{
+
+    color:#16A34A;
+
+}
+
+/* ===================================
+   KPI GLOW EFFECT
+=================================== */
+
+.kpi-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    right:-70px;
+    top:-70px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    circle,
+
+    rgba(124,92,255,.25),
+
+    transparent);
+
+    filter:blur(35px);
+
+}
+
+.kpi-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    left:-20px;
+    bottom:-20px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    circle,
+
+    rgba(255,255,255,.80),
+
+    transparent);
+
+    filter:blur(25px);
+
+}
+
+.trend-line{
+
+    margin-top:8px;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    color:#B14EFF;
+
+    opacity:.75;
+
+}
+
+/* ===================================
+   MAIN DASHBOARD GRID
+=================================== */
+
+.dashboard-grid{
+
+    margin-top:20px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:18px;
+
+}
+
+.revenue-card{
+
+    min-height:340px;
+
+    padding:22px;
+
+}
+
+.service-card{
+
+    min-height:340px;
+
+    padding:22px;
+
+}
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.card-header h3{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.card-header span{
+
+    font-size:13px;
+
+    color:#777;
+
+}
+
+.chart-placeholder{
+
+    width:100%;
+
+    height:250px;
+
+    border-radius:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,.18),
+    rgba(255,255,255,.08));
+
+    border:1px dashed rgba(108,99,255,.25);
+
+    color:#888;
+
+    font-size:15px;
+
+}
+
+/* ===================================
+   MAIN DASHBOARD
+=================================== */
+
+.dashboard-main{
+
+    margin-top:20px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:20px;
+
+}
+
+.dashboard-bottom{
+
+    margin-top:20px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+/* ===================================
+   REVENUE CARD
+=================================== */
+
+.revenue-card{
+
+    min-height:340px;
+
+    padding:24px;
+
+}
+
+/* ===================================
+   SERVICE CARD
+=================================== */
+
+.service-card{
+
+    min-height:340px;
+
+    padding:24px;
+
+}
+
+/* ===================================
+   BOTTOM CARDS
+=================================== */
+
+.bottom-card{
+
+    min-height:220px;
+
+    padding:22px;
+
+}
+
+/* ===================================
+   CARD TITLE
+=================================== */
+
+.card-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.card-title h3{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.card-title span{
+
+    color:#6B7280;
+
+    font-size:13px;
+
+}
+
+.chart-area{
+
+    width:100%;
+
+    height:260px;
+
+    position:relative;
+
+    padding:10px;
+
+}
+
+.donut-area{
+
+    height:250px;
+
+    border-radius:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.18);
+
+    border:1px dashed rgba(108,99,255,.30);
+
+    color:#777;
+
+    font-weight:600;
+
+}
